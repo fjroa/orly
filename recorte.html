@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Recorte</title>
+     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/focuspoint.cssf">
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.focuspoint.js"></script>
+    <script type="text/javascript">
+		//<![CDATA[	
+			
+			(function($) {
+				$(document).ready(function() {
+					
+					//Fire plugin
+					$('.focuspoint').focusPoint();
+					
+				});
+			}(jQuery));
+		
+		//]]>
+		</script>
+</head>
+    <body>
+        <h1>Recorte</h1>
+        
+        <div style="float:left; margin-right:30px;">Original<br><img src="images/535106-user_512x512.png"></div>
+        <div style="float:left;" class="focuspoint persona" class="focuspoint"
+            data-focus-x="0.831"
+            data-focus-y="-0.224">
+            Recorte<br>
+            <div class="foto"><img src="images/535106-user_512x512.png"></div>
+            <div class="pie">Nombre Apellido1 Apellido 2 Localidad (Provincia)</div>
+        </div>
+    </body>
+</html>
