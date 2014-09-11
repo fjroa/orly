@@ -1,0 +1,25 @@
+
+.persona {
+    max-width: 250px;
+    max-height: 400px;
+    overflow: hidden;
+    background-color: #E8FB71;
+}
+
+.foto {
+    max-height: 70%;
+    -webkit-clip-path: ellipse(100px 219px);
+    overflow: hidden;
+    background-color: white;
+}
+
+.pie {
+    max-height: 30%;
+    text-align: center;
+    background-color: #ffb400;
+}
+
+img {
+    max-width:100%; 
+    ax-height:100%;
+}
