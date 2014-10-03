@@ -1,25 +1,50 @@
 
 .persona {
-    max-width: 250px;
-    max-height: 400px;
+    width: 250px;
+    height: 400px;
     overflow: hidden;
-    background-color: #E8FB71;
 }
 
-.foto {
-    max-height: 70%;
-    -webkit-clip-path: ellipse(100px 219px);
+.persona2 {
+    width: 250px;
+    height: 400px;
     overflow: hidden;
+}
+
+svg {
+    position:absolute; 
+    background:yellow;
+    height: 290px;
+    width: 250px;
+}
+
+ellipse { fill:red; stroke:black; stroke-width:2px }
+
+.foto {
+    height: 300px;
+    position:relative;
     background-color: white;
+    vertical-align: bottom;
+    display: table-cell;
+}
+
+.foto2 {
+    height: 51px;
+    -webkit-clip-path: ellipse(20px 29px);
+    overfl11ow: hidden;
+    background-color: white;
+    vertical-align: bottom;
+    display: table-cell;
 }
 
 .pie {
-    max-height: 30%;
     text-align: center;
     background-color: #ffb400;
+    max-height: 30%;
+    overflow: hidden;
 }
 
-img {
-    max-width:100%; 
-    ax-height:100%;
+.foto img {
+    width: 250px;
+    margin: auto;
 }

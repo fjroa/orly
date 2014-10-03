@@ -1,13 +1,101 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Prueba de concepto</title>
-     <link rel="stylesheet" href="css/main.css" />
-</head>
-    <body>
-        <h1>Lista de Efectos</h1>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Orly : Orlas automáticas">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Orly</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/fjroa/orly">View on GitHub</a>
+
+          <h1 id="project_title">Orly</h1>
+          <h2 id="project_tagline">Orlas automáticas</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/fjroa/orly/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/fjroa/orly/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+                <h2>Enlaces de interes</h2>
         <ol>
             <li><a href="recorte.html">Recorte</a></li>
         </ol>
-    </body>
+            <div id="readme" class="boxed-group flush clearfix announce instapaper_body md">
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a name="user-content-orly" class="anchor" href="#orly" aria-hidden="true"><span class="octicon octicon-link"></span></a>Descripción del proyecto</h1>
+
+<p>Este proyecto consiste en una aplicación que genere de manera automática composiciones gráficas de tipo orla de graduación que pueda ser facilmente personalizable y configurable, utilizando tecnologías web para su tratamiento y posicionamiento. La particularidad del sistema es la automatización del proceso de captura fotográfica.</p>
+
+<h1>
+<a name="user-content-an%C3%A1lisis" class="anchor" href="#an%C3%A1lisis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Análisis</h1>
+
+<p>El proyecto se encuentra en su fase de análisis inicial en la que se está definiendo el proceso que seguirá la aplicación. Para iniciar se considererá un proyecto tipo estándar de orla usando como referencia una orla de la Universidad de Jaén.</p>
+        
+<div><img  style="margin:auto; width:100%; display:block" src="https://lh3.googleusercontent.com/u-dMIlHe2knVMChGkXDbRVx_3rjuI05KJcADtAz3M1w">
+</div>
+<p>Podemos ver que una orla se compone de:</p>
+
+<ul class="task-list">
+<li>Marco que engloba la composición. Dispone de una identificación de la universidad y abajo consta de la promoción</li>
+<li>Cuerpo de fotografía, que esta dividido a su vez en:
+
+<ul class="task-list">
+<li>Parte Superior: Consta de los logotipos de la universidad y de la facultad correspondiente a cada lado, y en el centro se encuadran las fotografías de los profesores que impartieron la titulación. Encima se muestra el título de la facultad.</li>
+<li>Nombre de la titulación cursada, en la zona central diviendo ambas partes</li>
+<li>Parte Inferior: Consta de las fotografías de los alumnos que se graduaron ese año.</li>
+</ul>
+</li>
+</ul><p>A su vez, las fotografías tienen una forma que se repite:</p>
+
+<ul class="task-list">
+<li>Imagen : retrato de la persona, que viene adornado con un recorte oval. La imagen muestra la cabeza completa y el cuerpo en proporción 2:3</li>
+<li>Pie de fotografía: Tiene 3 líneas centradas compuestas por el nombre, apellidos y ciudad (provicia).</li>
+</ul><h1>
+<a name="user-content-tareas" class="anchor" href="#tareas" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tareas</h1>
+
+<p>Se realizará una apilcación web basada en AngularJS para el tratamiento de las imágenes basado en la librería ng-grid-panel <a href="https://github.com/Hacklone/ng-grid-panel">https://github.com/Hacklone/ng-grid-panel</a> como componente principal para el posicionamiento de las imagenes. Para el recorte se utilizara css.</p>
+
+<p>Lo ideal sería utilizar la librería OpenBR para localizar el punto medio que divide los ojos de la persona fotografiada. La idea es utilizar una herramienta similar a <a href="https://github.com/jonom/jquery-focuspoint">https://github.com/jonom/jquery-focuspoint</a> para realizar el recorte de las imagenes basado en los puntos focales devueltos por OpenBR. De este modo nos aseguramos que las fotografías se amolden correctamente de forma responsiva, además de permitir realizar una orla a partir de una fotografía grupal. </p>
+
+<p>Para capturar los datos se implentará un formulario html y habrá distintas formas de ordenación de las fotografías dependiendo de los datos, permitiendo el posicionamiento dinámico de las fotos mediante el click del ratón.</p>
+
+<p>Se necesitan los recursos del marco de tipo vectorial o de tipo css si fuera posible. Los logotipos serían imagenes estáticas.</p>
+
+<p>Las fotografía en cada parte indicada anteriormente serán obligatoriamente del mismo tamaño y con el mismo tipo de letra y tamaño. El tamaño vendrá determinado por el número de elementos que haya para que se respeten unas proporciones (basadas en una fórmula) que también será configurable. Esto abre la puerta a diversos templates y formas diferentes de orla. La fórmula para este caso en concreto está en proceso de análisis.</p>
+
+<p>Finalmente habrá un servicio web que nos entregue la orla en formato imprimible del tamaño que nosotros le indiquemos.</p>
+
+<p>En el futuro se pretende que una aplicación móvil que recoja las imágenes obtenidas directamente desde la cámara del dispositivo y automatice todo el proceso en la nube.</p></article>
+  </div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Orly maintained by <a href="https://github.com/fjroa">fjroa</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
 </html>
 
